@@ -164,6 +164,7 @@ const DescriptionBox = styled.div<{position:String}>`
 const Flex = styled.div`
     display: flex;
     margin-bottom: 30px;
+    min-height: 300px;
 
     > div {
         padding-left: 10%;

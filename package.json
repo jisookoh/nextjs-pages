@@ -2,7 +2,7 @@
   "name": "portpolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "jisookoh.github.io/jisookoh",
+  "homepage": "https://jisookoh.github.io/nextjs-pages",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
