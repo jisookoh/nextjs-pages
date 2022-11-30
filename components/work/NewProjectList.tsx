@@ -36,7 +36,7 @@ export default function NewProjectList({newList}) {
 
 const SlideItems = styled.div<{background:String}>`
     position: relative;
-    background-image : ${({background}) => background ? `url("${background}")` : ""};
+    background-image : ${({background}) => background ? `url("${process.env.NEXT_PUBLIC_IMAGES}${background}")` : ""};
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

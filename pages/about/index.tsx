@@ -10,7 +10,7 @@ export default function About() {
                     <Flex>
                         <ImageAside>
                             <Image 
-                            src={"/images/jisooImg.jpg"} 
+                            src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/jisooImg.jpg`} 
                             alt={"고지수 이미지"}
                             layout={"fill"}
                             ></Image>

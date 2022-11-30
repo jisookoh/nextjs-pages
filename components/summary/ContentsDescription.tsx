@@ -56,7 +56,7 @@ export default function ContentsDescription({qProject}) {
                                     {data?.tech.map((val, idx) => (
                                         <TechListItem key={idx}>
                                             <Image 
-                                                src={val.icon} 
+                                                src={`/${process.env.NEXT_PUBLIC_IMAGES}${val.icon}`} 
                                                 width="20"
                                                 height="20"
                                                 alt={`${val.techName} icon`}
@@ -78,7 +78,7 @@ export default function ContentsDescription({qProject}) {
                     <ImageWrapper>
                         {data?.image && 
                             <Image 
-                            src={data?.image} 
+                            src={`/${process.env.NEXT_PUBLIC_IMAGES}${data?.image}`} 
                             alt={`${data?.title} 목업 이미지`}
                             layout="fill"
                             />

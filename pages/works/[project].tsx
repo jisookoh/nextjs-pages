@@ -23,7 +23,7 @@ export default function WorkProject() {
                 <BannerWrapper>
                     {project?.banner ? (
                         <Image 
-                            src={project.banner} 
+                            src={`/${process.env.NEXT_PUBLIC_IMAGES}${project.banner}`} 
                             layout="fill"
                             objectFit="cover"
                             alt="프로젝트 배너"
@@ -31,7 +31,7 @@ export default function WorkProject() {
                         /> 
                         ): (
                         <Image 
-                            src="/images/exImg.jpg" 
+                            src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/exImg.jpg`}
                             layout="fill"
                             objectFit="cover"
                             alt="프로젝트 배너"
