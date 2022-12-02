@@ -224,6 +224,9 @@ const WorkListWrapper = styled.ul<{moreWidth:String}>`
         -webkit-box-direction: normal;
         flex-direction: column;
         align-items: stretch;
+        margin-bottom: 20px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
     `};
 `;
 
@@ -261,6 +264,8 @@ const WorkList = styled.li<{background:String}>`
         }
 
         ${({ theme }) => theme.media.tabletL`
+            height: 45rem;
+
             &:hover {
                 transform: scale(1.02);
                 box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 1);
@@ -268,7 +273,6 @@ const WorkList = styled.li<{background:String}>`
 
             &::after {
                 background: linear-gradient(to bottom,  rgba(0,0,0,1),  rgba(0,0,0,0.1));
-
             }
         `};
     }

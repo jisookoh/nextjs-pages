@@ -68,6 +68,21 @@ const SubSection = styled.section<{number:Number}>`
                 `;
         }
     }}
+
+    ${({ theme }) => theme.media.tabletL`
+        ${({number}) => {
+            switch (number) {
+                case 1:
+                    return`
+                        margin-bottom: 50px;
+                    `;
+                case 2:
+                    return`
+                        padding: 0 20px;
+                    `;
+            }
+        }}
+    `};
 `;
 
 const BannerWrapper = styled.figure`

@@ -102,7 +102,7 @@ export default function ContentsDescription({qProject}) {
 
 
 const ContributeWrapper = styled.article`
-    padding-bottom: 100px;
+    padding-bottom: 10rem;
 `;
 
 const TitleBox = styled.div`
@@ -170,6 +170,33 @@ const Flex = styled.div`
         padding-left: 10%;
         flex: 1 0 0;
     }
+
+    ${({ theme }) => theme.media.tabletL`
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        > div {
+            &:not(:last-child) {
+                width: 50%;
+                margin-bottom: 5rem;
+            }
+
+            width: auto;
+            flex: none;
+            padding-left: 5rem;
+        }
+    `};
+
+    ${({ theme }) => theme.media.mobileL`
+        > div {
+            padding-left: 0;
+            &:nth-child(2) {
+                padding-left: 3rem;
+            }
+        }
+    `}
+
+    
 `;
 
 const FlexCol = styled.div`
@@ -200,6 +227,16 @@ const TechListItem =styled.li`
     &:not(:last-child) {
         margin-bottom: 10px;
     }
+
+    ${({ theme }) => theme.media.mobileL`
+        > span {
+            width: calc(100% - 10px);
+            
+            &:not(:last-child) {
+                margin-right: 10px !important;
+            }
+        }
+    `}
 `;
 
 const HomePageLink = styled.div`
@@ -264,6 +301,17 @@ const HomePageLink = styled.div`
             font-size: 0;
         }
     }
+
+    ${({ theme }) => theme.media.tabletL`
+        > a {
+            max-width: 150px;
+            padding: 15px 0;
+
+            > span.Icon {
+                width: 10px;
+            }
+        }
+    `}
 `;
 
 const MissingPage = styled.div`
@@ -277,4 +325,18 @@ const ImageWrapper = styled.div`
     position: relative;
     height: 453px;
     margin-bottom: 30px;
+
+    ${({theme}) => theme.media.tabletL`
+        height: auto;
+
+        > span {
+            position: relative !important;
+
+            > img {
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+    `}
 `;
