@@ -119,7 +119,7 @@ const TitleBox = styled.div`
         transform: translateX(-50%);
         width: 10%;
         height: 3px;
-        background-color: #333;
+        background-color: #fff;
         opacity: 0.2;
 
     }
@@ -132,14 +132,14 @@ const SubTitle = styled.h5`
     padding-left: 0px;
     font-family: Poppins, sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 2rem;
     margin: 10px 0 ;
 `
 
 const Descrition = styled.p<{align?:String}>`
     margin-bottom: 15px;
     padding-right: 0px;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 30px;
     -o-object-fit: fill;
     object-fit: fill;
@@ -187,6 +187,7 @@ const TechList = styled.ul`
 const TechListItem =styled.li`
     display: flex;
     align-items: center;
+    font-size: 1.6rem;
 
     > span {
         width: calc(100% - 30px);
@@ -220,7 +221,7 @@ const HomePageLink = styled.div`
         z-index: 10;
         font-weight: 500;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 1.6rem;
 
         ::after {
             content: '';
@@ -238,13 +239,13 @@ const HomePageLink = styled.div`
             box-shadow: 2px 0px 14px rgb(0 0 0 / 60%);
         }
 
-        :hover, :focus {
+        :hover {
             color: #fff !important;
             border: 3px solid #3399ff;
             box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
         }
 
-        :hover::after, :focus::after {
+        :hover::after {
             opacity: 1;
             width: 120%;
         }
@@ -268,7 +269,7 @@ const HomePageLink = styled.div`
 const MissingPage = styled.div`
     height: 300px;
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
 `;
 

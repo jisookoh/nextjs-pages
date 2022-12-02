@@ -55,7 +55,7 @@ const SlideItems = styled.div<{background:String}>`
     & > a {
         display: block;
         height: 500px;
-        padding: 40px;
+        padding: 4rem;
         position: relative;
         z-index: 2;
 
@@ -64,13 +64,20 @@ const SlideItems = styled.div<{background:String}>`
         }
 
         > h3 {
-            font-size: 30px;
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         > p {
-            font-size: 16px;
+            font-size: 1.6rem;
         }
     }
+
+    ${({ theme }) => theme.media.tabletL`
+        & > a {
+            height: 350px;
+        }
+    `};
 `;
 // const ProjectList = styled.div`
 //     display: flex;

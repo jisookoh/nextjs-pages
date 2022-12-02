@@ -2,12 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { newTopLists, newBottomLists } from "components/work/list";
+import { newTopLists, newBottomLists, repairTopLists, repairBottomLists  } from "components/work/list";
 
 export default function Home() {
 
     const newTopListData = [...newTopLists];
     const newBottomListData = [...newBottomLists];
+    const reapairTopListData = [...repairTopLists];
+    const reapairBottomListData = [...repairBottomLists];
 
     return (
         <MainWrapper>
@@ -70,6 +72,41 @@ export default function Home() {
                     </WorkListWrapper>
                 </WorkSecWrapper>
             </WorkSection>
+
+            <WorkSection number={3}>
+                <WorkSecWrapper>
+                    <TitleBox>
+                        <WorkListTitle>Maintance & Repair</WorkListTitle>
+                        <Link href={"/works/new"}>More +</Link>
+                    </TitleBox>
+                    <WorkListWrapper moreWidth="left">
+                        {reapairTopListData.map((v) => (
+                            <WorkList key={v.title} background={v.webImage}>
+                                <Link href={v.link}></Link>
+                                <DescriptionBox>
+                                    <Link href={v.link}>
+                                        <h3>{v.title}</h3>
+                                        <p>{v.desc}</p>
+                                    </Link>
+                                </DescriptionBox>
+                            </WorkList>
+                        ))}
+                    </WorkListWrapper>
+                    <WorkListWrapper moreWidth="center">
+                        {reapairBottomListData.map((v) => (
+                            <WorkList key={v.title} background={v.webImage}>
+                                <Link href={v.link}></Link>
+                                <DescriptionBox>
+                                    <Link href={v.link}>
+                                        <h3>{v.title}</h3>
+                                        <p>{v.desc}</p>
+                                    </Link>
+                                </DescriptionBox>
+                            </WorkList>
+                        ))}
+                    </WorkListWrapper>
+                </WorkSecWrapper>
+            </WorkSection>
         </MainWrapper>
     )
 }
@@ -78,7 +115,12 @@ export default function Home() {
 const MainWrapper = styled.div`
     max-width: 960px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 7rem;
+
+    ${({ theme }) => theme.media.tabletL`
+        padding-left: 20px;
+        padding-right: 20px;
+    `};
 `;
 
 const WorkSection = styled.section<{number : Number}>`
@@ -86,11 +128,15 @@ ${({ number }) => {
     switch (number) {
         case 1:
             return `
-                margin-bottom: 80px;
+                margin-bottom: 8rem;
             `;
         case 2:
             return `
-                margin-bottom: 150px;
+                margin-bottom: 15rem;
+            `;
+        case 3:
+            return `
+                margin-bottom: 10rem;
             `;
     }
   }}
@@ -105,9 +151,8 @@ const SectionMainTitleBox = styled.div`
 `;
 
 const SectionMainTitle = styled.h2`
-    // max-width: 70%;
     font-family: Montserrat, sans-serif;
-    font-size: 66px;
+    font-size: 6.6rem;
     line-height: 1.2;
     letter-spacing: -3px;
 `;
@@ -132,7 +177,7 @@ const LeftTextBox = styled.div`
     text-align:right;
 
     & > p {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height:1.4;
         margin: 0;
     }
@@ -166,8 +211,20 @@ const WorkListWrapper = styled.ul<{moreWidth:String}>`
                 return `
                     grid-template-columns: 580px 350px;
                 `;
+            case 'center':
+                return`
+                    grid-template-columns: 100%;
+                `;
         }
-      }}
+    }}
+
+    ${({ theme }) => theme.media.tabletL`
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        align-items: stretch;
+    `};
 `;
 
 const WorkList = styled.li<{background:String}>`
@@ -202,13 +259,25 @@ const WorkList = styled.li<{background:String}>`
             border-radius: 10px;
             overflow: hidden;
         }
+
+        ${({ theme }) => theme.media.tabletL`
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 1);
+            }
+
+            &::after {
+                background: linear-gradient(to bottom,  rgba(0,0,0,1),  rgba(0,0,0,0.1));
+
+            }
+        `};
     }
 
 
 `;
 
 const WorkListTitle = styled.h3`
-    font-size: 40px;
+    font-size: 3.6rem;
     font-weight: 700;
     font-family: Montserrat, sans-serif;
     margin: 0;
@@ -222,21 +291,22 @@ const DescriptionBox = styled.div`
     & > a {
         display: block;
         margin-top: 0px;
-        padding-top: 40px;
-        padding-right: 30px;
-        padding-left: 40px;
-        padding-bottom: 30px;
+        padding-top: 4rem;
+        padding-right: 3rem;
+        padding-left: 4rem;
+        padding-bottom: 3rem;
 
         > * {
             color: #fff;
         }
 
         > h3 {
-            font-size: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
 
         > p {
-            font-size: 14px;
+            font-size: 1.4rem;
         }
     }
 `;
@@ -249,7 +319,7 @@ const TitleBox = styled.div`
 
     & > a {
         display: inline-block;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-family: Montserrat, sans-serif;
     }
 `;

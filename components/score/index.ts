@@ -97,7 +97,7 @@ export const ScoreLabel = styled.div<{ score: string; margin?: string; fontWeigh
   flex: none;
   position: relative;
   padding: 0 3px;
-  font-size: 12px !important;
+  font-size: 1.2rem !important;
   background: ${({ score }) => scoreBgColorSet[score.toLowerCase()]};
   border-color: ${({ score }) => scoreBorderColorSet[score.toLowerCase()]};
   color: ${({ score }) => {

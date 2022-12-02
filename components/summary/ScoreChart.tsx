@@ -38,10 +38,10 @@ const PercentLabelComponent = ({ percent, pos, fontSize}: IPercentLabelProps) =>
     return (
       <g transform={textTranslate}>
         <text textAnchor="middle" fontFamily="Inter" dominantBaseline="middle">
-          <tspan fill="#232325" fontSize={fontSize[0]} fontWeight={600} alignmentBaseline="baseline">
+          <tspan fill="#ffffff" fontSize={fontSize[0]} fontWeight={600} alignmentBaseline="baseline">
             {(percent * 100).toFixed(1)}
           </tspan>
-          <tspan fill="#484848" fontSize={fontSize[1]} fontWeight={400} alignmentBaseline="baseline">
+          <tspan fill="#ffffff" fontSize={fontSize[1]} fontWeight={400} alignmentBaseline="baseline">
             %
           </tspan>
         </text>

@@ -61,6 +61,10 @@ const SubSection = styled.section<{number:Number}>`
                 return`
                     max-width: 960px;
                     margin: 0 auto;
+
+                    ${({ theme }) => theme.media.tabletL`
+                        padding: 0 20px;
+                    `};
                 `;
         }
     }}
@@ -82,10 +86,14 @@ const BannerWrapper = styled.figure`
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+    ${({ theme }) => theme.media.tabletL`
+        height: 200px;
+    `};
 `;
 
 const BannerTitle = styled.h2`
-    font-size: 24px;
+    font-size: 3.0rem;
     font-weight: 500;
     color: #fff;
     position: absolute;

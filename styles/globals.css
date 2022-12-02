@@ -9,6 +9,7 @@ body {
     -ms-user-select: none !important;
     user-select: none !important;
     /* scroll-behavior: smooth; */
+    font-size: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,6 +37,11 @@ ul,ol {
     margin: 0;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .swiper-slide {
     font-size: 0;
     border-radius: 15px;
@@ -50,4 +56,32 @@ ul,ol {
         color: white;
         background: black;
   }
+}
+
+@media screen and (max-width: 1024px) {
+    html,
+    body {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html,
+    body {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    html,
+    body {
+        font-size: 6px;
+    }
 }

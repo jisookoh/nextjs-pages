@@ -51,6 +51,12 @@ const InnerCont = styled.div`
     width: 96%;
     align-items: center;
     justify-content: space-between;
+
+    ${({ theme }) => theme.media.tabletL`
+        padding: 0 20px;
+        margin: 0;
+        width: 100%;
+    `};
 `;
 
 const Nav = styled.nav`
@@ -63,7 +69,7 @@ const Logo = styled.strong`
         display: block;
         margin: 0;
         font-family: Poppins, sans-serif;
-        font-size: 24px;
+        font-size: 2.4rem;
     }
 `;
 
@@ -79,7 +85,7 @@ const MenuItem = styled.li<{pathname:String}>`
         padding: 9px 15px;
         opacity: 0.6;
         font-family: Poppins, sans-serif;
-        font-size: 15px;
+        font-size: 1.5rem;
         line-height: 22px;
         font-weight: 600;
         text-align: center;

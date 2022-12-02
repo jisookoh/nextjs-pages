@@ -36,6 +36,10 @@ const FooterWrapper = styled.div`
     max-width: 500px;
     margin: 0 auto;
     padding 50px 0;
+
+    ${({ theme }) => theme.media.tabletL`
+        padding: 5rem 20px;
+    `};
 `;
 
 const FooterNavigation = styled.ul`
@@ -51,7 +55,7 @@ const FooterNavigationItem = styled.li`
     text-align: center;
 
     & > * {
-        font-size: 15px;
+        font-size: 1.5rem;
         font-weight: 600;
         font-family: Montserrat, sans-serif;
     }
@@ -59,7 +63,7 @@ const FooterNavigationItem = styled.li`
 
 const FooterCopyright = styled.span`
     display: block;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-family: Poppins, sans-serif;
     text-align: center;
 `;

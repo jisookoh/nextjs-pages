@@ -39,7 +39,7 @@ const BannerWrapper = styled.figure`
     margin: auto 0;
     position: relative;
     overflow: hidden;
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
 
     &::after {
         content: '';
@@ -50,10 +50,14 @@ const BannerWrapper = styled.figure`
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
+    ${({ theme }) => theme.media.tabletL`
+        height: 200px;
+    `};
 `;
 
 const BannerTitle = styled.h2`
-    font-size: 24px;
+    font-size: 3.0rem;
     font-weight: 500;
     color: #fff;
     position: absolute;
@@ -71,9 +75,13 @@ const SubSection = styled.section`
     position: relative;
     max-width: 960px;
     margin: 0 auto;
+
+    ${({ theme }) => theme.media.tabletL`
+        padding: 0 20px;
+    `};
 `;
 
 const SectionWrapper = styled.article<{number:Number}>`
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
 `;
