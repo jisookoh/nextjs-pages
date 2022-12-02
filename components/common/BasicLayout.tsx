@@ -19,8 +19,12 @@ const BasicLayout = ({ children}: IBasicLayoutProps) => {
 };
 
 const BodyWrap = styled.div`
-    height: 100vh;
     font-family: "Noto Sans KR", "Open Sans", sans-serif;
+    background-color: #111;
+
+    * {
+      color : #fff;
+    }
 `;
 
 const Main = styled.div`

@@ -186,7 +186,7 @@ const WorkList = styled.li<{background:String}>`
 
         &:hover {
             transform: scale(1.05);
-            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 1);
             border: 1px solid #999;
         }
 
