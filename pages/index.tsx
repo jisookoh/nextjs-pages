@@ -77,7 +77,6 @@ export default function Home() {
                 <WorkSecWrapper>
                     <TitleBox>
                         <WorkListTitle>Maintance & Repair</WorkListTitle>
-                        <Link href={"/works/new"}>More +</Link>
                     </TitleBox>
                     <WorkListWrapper moreWidth="left">
                         {reapairTopListData.map((v) => (

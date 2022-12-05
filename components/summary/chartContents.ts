@@ -318,6 +318,10 @@ export const ChartContent = {
                     icon: "/images/laravelIcon.png"
                 },
                 {
+                    techName: "Swiper Slide",
+                    icon: "/images/swiperIcon.png"
+                },
+                {
                     techName: "AOS",
                     icon: "/images/aosIcon.png"
                 },
@@ -347,6 +351,10 @@ export const ChartContent = {
                     icon: "/images/laravelIcon.png"
                 },
                 {
+                    techName: "Swiper Slide",
+                    icon: "/images/swiperIcon.png"
+                },
+                {
                     techName: "AOS",
                     icon: "/images/aosIcon.png"
                 },
@@ -358,7 +366,90 @@ export const ChartContent = {
             during: "2주",
             link: "http://hoan20.co.kr/",
             image: "/images/mokup/hoanMokup.png"
-        }
+        },
+        {
+            id: 12,
+            project: "sparkle",
+            banner: "/images/sparkleBanner.jpg",
+            title: "스파클몰",
+            desc: "스파크몰은 생수/음료/부자재 등 스파클에서 판매하는 상품을 구매할 수 있는 이커먼스 사이트입니다. \n 이 프로젝트는 웹과 모바일에 특화된 사이트이며, php 순수코딩으로 작업한 퍼블리싱을 Laravel로 변환작업을 한 사이트입니다. \n 해당 프로젝트는 Git Lab으로 코드관리/협업 하였으며, \n 기존 운영하던 스파클몰 소스에서 컨트롤러와 Route를 연결하는 작업을 진행하였습니다. \n 또한 Hammer.js를 사용하여 모바일일 때 상품 카테고리들을 손가락 슬라이딩으로 넘길 수 있도록 하였습니다.",
+            contribute: 0.1,
+            tech: [
+                {
+                    techName: "Jquery",
+                    icon: "/images/jqueryIcon.png"
+                },
+                {
+                    techName: "PHP",
+                    icon: "/images/phpIcon.png"
+                },
+                {
+                    techName: "Laravel",
+                    icon: "/images/laravelIcon.png"
+                },
+                {
+                    techName: "Swiper Slide",
+                    icon: "/images/swiperIcon.png"
+                },
+                {
+                    techName: "Hammer.js",
+                    icon: "/images/hammerIcon.jpg"
+                },
+            ],
+            during: "2주",
+            link: "https://www.sparklemall.co.kr/main",
+            image: "/images/mokup/sparkleMokup.png"
+        },
+        {
+            id: 13,
+            project: "ip-detector",
+            banner: "/images/ipBanner.jpg",
+            title: "IP-DETECTOR",
+            desc: "",
+            contribute: 0.3,
+            tech: [
+                {
+                    techName: "React",
+                    icon: "/images/reactIcon.png"
+                },
+                {
+                    techName: "Next.js",
+                    icon: "/images/nextIcon.png"
+                },
+                {
+                    techName: "TypeScript",
+                    icon: "/images/tsIcon.png"
+                },
+                {
+                    techName: "Swiper Slide",
+                    icon: "/images/swiperIcon.png"
+                }
+            ],
+            during: "2주",
+            link: "https://ip-detector.com/",
+            image: "/images/mokup/ipMokup.png"
+        },
+        {
+            id: 14,
+            project: "noscam",
+            banner: "/images/noscamBanner.jpg",
+            title: "NOSCAM",
+            desc: "노스캠은 전화번호, 계좌번호를 통해 사기정보를 확인할 수 있는 사이트 입니다. \n 해당 프로젝트는 검색결과 리뉴얼에 따른 API통신 작업과 통신에 따른 분기처리, 결과 데이터 송출 및 퍼블리싱 작업을 진행하였습니다. \n 소스코드는 svn으로 관리하였습니다. ",
+            contribute: 0.2,
+            tech: [
+                {
+                    techName: "Python",
+                    icon: "/images/pythonIcon.png"
+                },
+                {
+                    techName: "Flask",
+                    icon: "/images/flaskIcon.png"
+                }
+            ],
+            during: "유지보수",
+            link: "https://noscam.co.kr/",
+            image: "/images/mokup/noscamMokup.png"
+        },
     ]
 }
 

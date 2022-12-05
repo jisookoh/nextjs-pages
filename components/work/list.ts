@@ -130,14 +130,14 @@
             title: "스파클몰",
             desc: "",
             link: "/works/sparkle",
-            webImage: "/images/wfwpWeb.jpg"
+            webImage: "/images/sparkleWeb.jpg"
         },
         {
             id: 2,
             title: "IP-Detector",
             desc: "",
             link: "/works/ip-detector",
-            webImage: "/images/foobankWeb.jpg"
+            webImage: "/images/ipWeb.jpg"
         },
     ];
 
@@ -147,7 +147,7 @@
             title: "노스캠",
             desc: "",
             link: "/works/noscam",
-            webImage: "/images/wfwpWeb.jpg"
+            webImage: "/images/noscamWeb.jpg"
         },
 
     ];

@@ -45,8 +45,13 @@ class MyDocument extends Document {
                             href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
                             rel="stylesheet"
                         />
+                        <link 
+                          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" 
+                          rel="stylesheet" 
+                          />
                         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap" />
-                        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"></link>
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+                        <link rel="preconnect" href="https://fonts.googleapis.com" />
                 </Head>
                 <body>
                         <Main />

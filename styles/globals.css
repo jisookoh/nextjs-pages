@@ -72,12 +72,12 @@ p {
     }
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
     html,
     body {
         font-size: 7px;
     }
-}
+} */
 
 @media screen and (max-width: 360px) {
     html,
