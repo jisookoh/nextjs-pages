@@ -14,6 +14,7 @@ export default function About() {
                                 src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/jisooImg.jpg`} 
                                 alt={"고지수 이미지"}
                                 layout={"fill"}
+                                priority
                                 />
                             </ImageWrapper>
                         </ImageAside>

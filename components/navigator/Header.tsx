@@ -16,7 +16,6 @@ const Header = () => {
 
     const router = useRouter();
     const pathname = router.pathname;
-    console.log(pathname);
     // const [addHeader, setAddHeader] = useState<string | undefined>();
 
     // useEffect(() => {
