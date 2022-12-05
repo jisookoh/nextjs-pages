@@ -11,7 +11,7 @@ export default function newProject() {
             <SubWrapper>
                 <BannerWrapper>
                     <Image 
-                        src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/exImg.jpg`}
+                        src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/exImg2.jpg`}
                         layout="fill"
                         objectFit="cover"
                         alt="프로젝트 배너"
