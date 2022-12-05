@@ -16,9 +16,23 @@ const Header = () => {
 
     const router = useRouter();
     const pathname = router.pathname;
+    // const [addHeader, setAddHeader] = useState<string | undefined>();
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', isSticky);
+    //     return () => {
+    //         window.removeEventListener('scroll', isSticky);
+    //     }
+    // }, [])
+
+    // const isSticky = (e) => {
+    //     const scrollTop = window.scrollY;
+    //     scrollTop >= 10 ? setAddHeader("is-sticky") : setAddHeader('');
+    // }
+
 
     return (
-        <HeaderWrap>
+        <HeaderWrap className="header-section">
             <InnerCont>
                 <HeaderLogo />
                 <Nav>
@@ -96,6 +110,14 @@ const MenuItem = styled.li<{pathname:String}>`
             opacity: 1;
         }
     }
+
+    ${({ theme }) => theme.media.tablet `
+        &:last-child {
+            h5 {
+                padding-right: 0;
+            }
+        }
+    `}
 `;
 
 const MemoizedHeader = React.memo(Header);

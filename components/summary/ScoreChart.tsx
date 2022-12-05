@@ -22,6 +22,7 @@ import { colorAnimation, FadeDots, loadingAnimation, LoadingPath, Path } from ".
 
 interface IRoundChartProps {
   percent: number; // 0 ~ 1 사이의 숫자
+  color: string,
   isLoading?: boolean;
 }
 
@@ -29,19 +30,20 @@ interface IPercentLabelProps {
   percent: number;
   pos: number;
   fontSize: number[];
+  color: string;
 }
 
-const PercentLabelComponent = ({ percent, pos, fontSize}: IPercentLabelProps) => {
+const PercentLabelComponent = ({ percent, pos, fontSize, color}: IPercentLabelProps) => {
     const textPos = pos + 3;
     const textTranslate = `translate(${textPos} ${textPos})`;
 
     return (
       <g transform={textTranslate}>
         <text textAnchor="middle" fontFamily="Inter" dominantBaseline="middle">
-          <tspan fill="#ffffff" fontSize={fontSize[0]} fontWeight={600} alignmentBaseline="baseline">
+          <tspan fill={color} fontSize={fontSize[0]} fontWeight={600} alignmentBaseline="baseline">
             {(percent * 100).toFixed(1)}
           </tspan>
-          <tspan fill="#ffffff" fontSize={fontSize[1]} fontWeight={400} alignmentBaseline="baseline">
+          <tspan fill={color} fontSize={fontSize[1]} fontWeight={400} alignmentBaseline="baseline">
             %
           </tspan>
         </text>
@@ -51,7 +53,7 @@ const PercentLabelComponent = ({ percent, pos, fontSize}: IPercentLabelProps) =>
 
 const PercentLabel = React.memo(PercentLabelComponent);
 
-export default function ScoreChart({ percent }: IRoundChartProps) {
+export default function ScoreChart({ percent, color }: IRoundChartProps) {
   const [windowWidth] = useBrowserSize();
   const [isTablet, setIsTablet] = useState(false);
   useEffect(() => {
@@ -120,7 +122,7 @@ export default function ScoreChart({ percent }: IRoundChartProps) {
           />
         )}
       </g>
-      {percent < 0 ? <FadeDots pos={circlePos} /> : <PercentLabel percent={percent} pos={circlePos} fontSize={percentFontSize} />}
+      {percent < 0 ? <FadeDots pos={circlePos} /> : <PercentLabel percent={percent} pos={circlePos} fontSize={percentFontSize} color={color} />}
     </svg>
   );
 }

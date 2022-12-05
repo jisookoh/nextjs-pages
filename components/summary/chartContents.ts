@@ -405,7 +405,7 @@ export const ChartContent = {
             project: "ip-detector",
             banner: "/images/ipBanner.jpg",
             title: "IP-DETECTOR",
-            desc: "",
+            desc: "IP-Detector는 웹 사이트, 도메인 및 IP 주소에 대한 정보를 무료로 제공헤주는 사이트 입니다. \n 이 프로젝트는 next.js와 typescript를 사용하여 개발 되었으며, 이미 완성된 프로젝트에서 \n axios를 통한 API 연동 수정, 퍼블리싱 / 슬라이드 오류 수정, dns 라이브러리를 통한 검색결과 값 송출등의 작업을 진행하였습니다.",
             contribute: 0.3,
             tech: [
                 {
@@ -425,7 +425,7 @@ export const ChartContent = {
                     icon: "/images/swiperIcon.png"
                 }
             ],
-            during: "2주",
+            during: "유지보수",
             link: "https://ip-detector.com/",
             image: "/images/mokup/ipMokup.png"
         },
@@ -434,8 +434,8 @@ export const ChartContent = {
             project: "noscam",
             banner: "/images/noscamBanner.jpg",
             title: "NOSCAM",
-            desc: "노스캠은 전화번호, 계좌번호를 통해 사기정보를 확인할 수 있는 사이트 입니다. \n 해당 프로젝트는 검색결과 리뉴얼에 따른 API통신 작업과 통신에 따른 분기처리, 결과 데이터 송출 및 퍼블리싱 작업을 진행하였습니다. \n 소스코드는 svn으로 관리하였습니다. ",
-            contribute: 0.2,
+            desc: "노스캠은 전화번호, 계좌번호를 통해 사기정보를 확인할 수 있는 사이트 입니다. \n 해당 프로젝트는 python 2.7v 환경에서 작업하였으며, \n 검색결과 리뉴얼에 따른 API통신 작업과 통신에 따른 분기처리, 결과 데이터 송출 및 퍼블리싱을 진행하였습니다. \n 소스코드는 svn으로 관리하였습니다. ",
+            contribute: 0.3,
             tech: [
                 {
                     techName: "Python",

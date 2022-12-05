@@ -61,13 +61,10 @@ const SubSection = styled.section<{number:Number}>`
                 return`
                     max-width: 960px;
                     margin: 0 auto;
-
-                    ${({ theme }) => theme.media.tabletL`
-                        padding: 0 20px;
-                    `};
                 `;
         }
     }}
+    
 
     ${({ theme }) => theme.media.tabletL`
         ${({number}) => {

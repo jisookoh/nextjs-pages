@@ -9,11 +9,13 @@ export default function About() {
                 <SectionWrapper>
                     <Flex>
                         <ImageAside>
-                            <Image 
-                            src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/jisooImg.jpg`} 
-                            alt={"고지수 이미지"}
-                            layout={"fill"}
-                            ></Image>
+                            <ImageWrapper>
+                                <Image 
+                                src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/jisooImg.jpg`} 
+                                alt={"고지수 이미지"}
+                                layout={"fill"}
+                                />
+                            </ImageWrapper>
                         </ImageAside>
                         <IntroduceWrapper>
                             <Title>
@@ -49,6 +51,16 @@ export default function About() {
                             <p>&nbsp;아솜</p>
                         </div>
                     </ChracterisicListItem>
+                    <ChracterisicListItem>
+                        <div>
+                            <h5>기간 : </h5>
+                            <p>&nbsp;2022.08.01 ~ 2022.10.21</p>
+                        </div>
+                        <div>
+                            <h5>회사명 : </h5>
+                            <p>&nbsp;AI Spera</p>
+                        </div>
+                    </ChracterisicListItem>
                 </ChracterisicList>
             </Section>
         </>
@@ -61,20 +73,36 @@ const Section = styled.section<{number: Number}>`
 
     > h2 {
         font-size: 2.4rem;
-        margin-bottom: 30px;
+        margin-bottom: 3rem;
     }
 
     ${({ number }) => {
         switch (number) {
             case 1:
                 return `
+                    padding-top: 100px;
                     margin-bottom: 100px;
+                `;
+            case 2:
+                return `
+                    padding-bottom: 150px;
                 `;
         }
     }}
 
     ${({ theme }) => theme.media.tabletL`
-        padding: 0 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        ${({ number }) => {
+            switch (number) {
+                case 1:
+                    return`
+                        padding-top: 6rem;
+                        margin-bottom: 8rem;
+                    `;
+            }
+        }}
     `};
 `;
 
@@ -84,15 +112,54 @@ const SectionWrapper = styled.article`
 
 const Flex = styled.div`
     display: flex;
+    align-items: center;
+
+    ${({ theme }) => theme.media.tablet`
+        flex-wrap: wrap;
+
+        > aside {
+            width: 100%;
+        }
+    `}
 `;
 
 const ImageAside = styled.aside`
     width: 40%;
+    margin: 0 20px;
+    
+    ${({ theme }) => theme.media.tablet`
+        text-align: center;
+        margin: 0;
+        margin-bottom: 7rem;
+    `}
+`;
+
+const ImageWrapper = styled.div`
     height: 510px;
     position: relative;
     overflow: hidden;
     border-radius: 45%;
-    margin: 0 20px;
+    box-shadow: -10px 10px 30px 0 rgba(0, 0, 0, 0.3);
+
+    ${({ theme }) => theme.media.tabletL`
+        height: auto;
+
+        > span {
+            position: relative !important;
+
+            > img {
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+    `}
+
+    ${({ theme }) => theme.media.tablet`
+        text-align: center;
+        width: 60%;
+        display: inline-block;
+    `}
 `;
 
 const IntroduceWrapper = styled.aside`
@@ -101,15 +168,15 @@ const IntroduceWrapper = styled.aside`
 `;
 
 const Title = styled.h2`
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 30px;
 `;
 
 const Description = styled.p`
     font-size: 1.6rem;
     line-height: 1.8;
     word-break: keep-all;
-    margin-bottom: 50px;
 `;
 
 const ChracterisicList = styled.ol`
@@ -120,12 +187,20 @@ const ChracterisicList = styled.ol`
 
 const ChracterisicListItem = styled.li`
 
+    :not(:last-child) {
+        margin-bottom: 20px;
+    }
+
     > div {
         display : flex;
         align-items: center;
     }
 
     h5 {
-        font-size: 1.6rem;
+        font-size: 2.0rem;
+    }
+
+    p {
+        font-size: 1.8rem;
     }
 `;

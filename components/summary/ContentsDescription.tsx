@@ -46,7 +46,7 @@ export default function ContentsDescription({qProject}) {
                         <div className="workLoad">
                             <SubTitle>기여도</SubTitle>
                             {resultImgBool === "is_active" &&
-                                <ScoreChart percent={ data?.contribute } />
+                                <ScoreChart percent={ data?.contribute } color={"#111111"} />
                             }
                         </div>
                         <FlexCol>
@@ -260,6 +260,10 @@ const HomePageLink = styled.div`
         border-radius: 5px;
         font-size: 1.6rem;
 
+        * {
+            color: #3399ff;
+        }
+
         ::after {
             content: '';
             width: 0%;
@@ -277,9 +281,12 @@ const HomePageLink = styled.div`
         }
 
         :hover {
-            color: #fff !important;
-            border: 3px solid #3399ff;
+            border-color: #3399ff;
             box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+
+            * {
+                color: #fff;
+            }
         }
 
         :hover::after {
@@ -306,6 +313,7 @@ const HomePageLink = styled.div`
         > a {
             max-width: 150px;
             padding: 15px 0;
+            border-width: 2px;
 
             > span.Icon {
                 width: 10px;

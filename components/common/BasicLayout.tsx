@@ -1,4 +1,5 @@
 import Footer from "components/navigator/Footer";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import Header from "../navigator/Header";
 
@@ -8,9 +9,10 @@ interface IBasicLayoutProps {
 
 const BasicLayout = ({ children}: IBasicLayoutProps) => {
 
+  const router = useRouter();
 
   return (
-    <BodyWrap>
+    <BodyWrap route={router?.pathname} >
         <Header />
         <Main>{children}</Main>
         <Footer />
@@ -18,13 +20,16 @@ const BasicLayout = ({ children}: IBasicLayoutProps) => {
   );
 };
 
-const BodyWrap = styled.div`
+const BodyWrap = styled.div<{ route:String }>`
     font-family: "Noto Sans KR", "Open Sans", sans-serif;
-    background-color: #111;
+    background-color:  ${({ route }) => route === "/" ? "#111" : "#f0f0f0"};
+    overflow: hidden;
 
     * {
-      color : #fff;
+      color : ${({ route }) => route === "/" ? "#fff" : "#111"};
     }
+
+   
 `;
 
 const Main = styled.div`
