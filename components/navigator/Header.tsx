@@ -16,6 +16,7 @@ const Header = () => {
 
     const router = useRouter();
     const pathname = router.pathname;
+    console.log(pathname);
     // const [addHeader, setAddHeader] = useState<string | undefined>();
 
     // useEffect(() => {
@@ -36,9 +37,9 @@ const Header = () => {
             <InnerCont>
                 <HeaderLogo />
                 <Nav>
-                    <Menus>
+                    <Menus pathname={pathname}>
                         {menus.map((m) => (
-                            <MenuItem key={m.title} pathname={pathname}>
+                            <MenuItem key={m.title} >
                                 <Link href={m.link}>
                                 <h5>{m.title}</h5>
                                 </Link>
@@ -82,17 +83,32 @@ const Logo = styled.strong`
     h2 {
         display: block;
         margin: 0;
-        font-family: Poppins, sans-serif;
+        font-family: Montserrat, sans-serif;
         font-size: 2.4rem;
+        font-weight: 800;
     }
 `;
 
-const Menus = styled.ul`
+const Menus = styled.ul<{pathname:String}>`
   display: flex;
   list-style: none;
+
+  ${({ pathname }) => pathname !== "/about" ? `
+    > li:first-child {
+        h5 {
+            opacity: 1;
+        }
+    }
+  ` : `
+    > li:last-child {
+        h5 {
+            opacity: 1;
+        }
+    }
+  `}
 `;
 
-const MenuItem = styled.li<{pathname:String}>`
+const MenuItem = styled.li`
     h5 {
         display: inline-block;
         margin: 0;

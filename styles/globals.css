@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Dosis, Montserrat, Segoe UI, Roboto, Oxygen,
+    font-family: -apple-system, Noto Sans KR, Nunito, BlinkMacSystemFont, Dosis, Montserrat, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -webkit-user-select: none !important;
     -moz-user-select: -moz-none !important;
@@ -50,19 +50,6 @@ p {
     font-size: 0;
     border-radius: 15px;
     overflow: hidden;
-}
-
-.is-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
-    background-color: #ffffff !important;
-    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 
 @media (prefers-color-scheme: dark) {

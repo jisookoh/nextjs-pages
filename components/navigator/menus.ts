@@ -6,14 +6,13 @@ export interface IMenu {
 
 const menus: IMenu[] = [
   {
-    title: "About",
-    link: "/about"
-  },
-  {
     title: "Works",
     link: "/"
   },
-
+  {
+    title: "About",
+    link: "/about"
+  }
 ];
 
 

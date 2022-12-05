@@ -176,14 +176,6 @@ const MailBox = styled.div`
             margin-right: 15px;
         }
     }
-
-    ${({theme}) => theme.media.tabletL`
-        & > a {
-            &:not(:last-child) {
-                margin-right: 10px;
-            }
-        }
-    `}
 `;
 
 const LeftTextBox = styled.div`

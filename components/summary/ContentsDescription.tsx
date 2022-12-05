@@ -130,7 +130,6 @@ const SubTitle = styled.h5`
     margin-right: 0px;
     margin-left: 0px;
     padding-left: 0px;
-    font-family: Poppins, sans-serif;
     font-weight: 600;
     font-size: 2rem;
     margin: 10px 0 ;

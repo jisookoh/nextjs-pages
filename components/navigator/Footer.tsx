@@ -19,10 +19,10 @@ const Footer = () => {
                     <Button onClick={handleClickTopButton}>Back to Top</Button>
                 </FooterNavigationItem>
                 <FooterNavigationItem>
-                    <Link href="/about">About</Link>
+                    <Link href="/">Work</Link>
                 </FooterNavigationItem>
                 <FooterNavigationItem>
-                    <Link href="/">Work</Link>
+                    <Link href="/about">About</Link>
                 </FooterNavigationItem>
             </FooterNavigation>
             <FooterCopyright>
