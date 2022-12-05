@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { newTopLists, newBottomLists, repairTopLists, repairBottomLists  } from "components/work/list";
 
@@ -22,10 +22,13 @@ export default function Home() {
                             PORTPOLIO
                         </SectionMainTitle>
                     </SectionMainTitleBox>
-                    <SectionMainFlex>
+                    <SectionMain>
                         <MailBox>
                             <Link href="mailto:gosjioo0312@naver.com">
                                 <FontAwesomeIcon icon={faEnvelope} />
+                            </Link>
+                            <Link href="tel:010-4494-0312">
+                                <FontAwesomeIcon icon={faPhone} />
                             </Link>
                         </MailBox>
                         <LeftTextBox>
@@ -34,7 +37,7 @@ export default function Home() {
                                     Let&apos;s make amazing products with flexibility, speed, and quality!
                                 </p> */}
                             </LeftTextBox>
-                    </SectionMainFlex>
+                    </SectionMain>
                 </WorkSecWrapper>
             </WorkSection>
 
@@ -156,20 +159,31 @@ const SectionMainTitle = styled.h2`
     letter-spacing: -3px;
 `;
 
-const SectionMainFlex = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    flex: 1 0 0;
+const SectionMain = styled.div`
+
 `;
 
 const MailBox = styled.div`
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 0 0;
 
     & > a {
         display: block;
         width: 24px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
+
+    ${({theme}) => theme.media.tabletL`
+        & > a {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    `}
 `;
 
 const LeftTextBox = styled.div`
@@ -326,4 +340,5 @@ const TitleBox = styled.div`
         font-family: Montserrat, sans-serif;
     }
 `;
+
 

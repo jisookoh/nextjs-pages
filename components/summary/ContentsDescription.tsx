@@ -140,7 +140,7 @@ const Descrition = styled.p<{align?:String}>`
     margin-bottom: 15px;
     padding-right: 0px;
     font-size: 1.6rem;
-    line-height: 30px;
+    line-height: 1.8;
     -o-object-fit: fill;
     object-fit: fill;
     text-align: ${({align}) => align == "center" ? "center" : "left"};
