@@ -119,7 +119,7 @@ const TitleBox = styled.div`
         transform: translateX(-50%);
         width: 10%;
         height: 3px;
-        background-color: #fff;
+        background-color: #111;
         opacity: 0.2;
 
     }
