@@ -128,7 +128,7 @@ export const ChartContent = {
             project: "wfwp",
             banner: "/images/wfwpBanner.jpg",
             title: "세계평화여성연합",
-            desc: "세계여성평화협회는 UN 경제사회 이사회 포괄적 협의지위 기관 국제사회의 지속가능발전목표(UN SDGs)를 달성을 목표로 하는 단체입니다. \n 헤당 페이지는 적응형 페이지로 웹에만 특화되어 있는 페이지 입니다. \n 메인페이지와 소개페이지는 타 작업자가 진행하였으며, php 순수언어에서 Laravel로 변환 작업을 하였습니다. \n 특징으론 SDGs 페이지에서 각 국가 페이지들은 동적 라우팅으로 작업하였고, 국가별로 컴포넌트화 하였습니다.",
+            desc: "세계여성평화협회는 UN 경제사회 이사회 포괄적 협의지위 기관 국제사회의 지속가능발전목표(UN SDGs)를 달성을 목표로 하는 단체입니다. \n 해당 페이지는 적응형 페이지로 웹에만 특화되어 있는 페이지 입니다. \n 메인페이지와 소개페이지는 타 작업자가 진행하였으며, php 순수언어에서 Laravel로 변환 작업을 하였습니다. \n 특징으론 SDGs 페이지에서 각 국가 페이지들은 동적 라우팅으로 작업하였고, 국가별로 컴포넌트화 하였습니다.",
             contribute: 0.80,
             tech: [
                 {
@@ -405,7 +405,7 @@ export const ChartContent = {
             project: "ip-detector",
             banner: "/images/ipBanner.jpg",
             title: "IP-DETECTOR",
-            desc: "IP-Detector는 웹 사이트, 도메인 및 IP 주소에 대한 정보를 무료로 제공헤주는 사이트 입니다. \n 이 프로젝트는 next.js와 typescript를 사용하여 개발 되었으며, 이미 완성된 프로젝트에서 \n axios를 통한 API 연동 수정, 퍼블리싱 / 슬라이드 오류 수정, dns 라이브러리를 통한 검색결과 값 송출등의 작업을 진행하였습니다.",
+            desc: "IP-Detector는 웹 사이트, 도메인 및 IP 주소에 대한 정보를 무료로 제공해주는 사이트 입니다. \n 이 프로젝트는 next.js와 typescript를 사용하여 개발 되었으며, 이미 완성된 프로젝트에서 \n axios를 통한 API 연동 수정, 퍼블리싱 / 슬라이드 오류 수정, dns 라이브러리를 통한 검색결과 값 송출등의 작업을 진행하였습니다.",
             contribute: 0.3,
             tech: [
                 {

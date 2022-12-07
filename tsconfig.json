@@ -38,7 +38,7 @@
     "pages/document.js",
     "next.config.js",
     "components/common/tagListPop"
-  ],
+, "next-seo.config.js"  ],
   "exclude": [
     "node_modules"
   ]
