@@ -302,20 +302,27 @@ const HomePageLink = styled.div`
         > span.Icon {
             display: inline-block;
             vertical-align: middle;
-            width: 12px;
             margin-right: 0;
             font-size: 0;
+
+            > svg {
+                width: 12px;
+                height: 20px;
+            }
         }
     }
 
     ${({ theme }) => theme.media.tabletL`
         > a {
-            max-width: 150px;
+            max-width: 20rem;
             padding: 15px 0;
             border-width: 2px;
 
             > span.Icon {
-                width: 10px;
+                > svg {
+                    width: 8px;
+                    height: 14px;
+                }
             }
         }
     `}
