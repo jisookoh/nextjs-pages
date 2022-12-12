@@ -28,10 +28,10 @@ export default function Home() {
                             <Link href="mailto:gosjioo0312@naver.com">
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </Link>
-                            <Link href="https://github.com/jisookoh" target={"_blank"}>
+                            <Link href="tel:010-4494-0312">
                                 <FontAwesomeIcon icon={faPhone} />
                             </Link>
-                            <Link href="mailto:gosjioo0312@naver.com">
+                            <Link href="https://github.com/jisookoh"  target={"_blank"}>
                                 <FontAwesomeIcon icon={faGithub} />
                             </Link>
                         </MailBox>
