@@ -28,7 +28,7 @@ export default function Home() {
                             <Link href="mailto:gosjioo0312@naver.com">
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </Link>
-                            <Link href="tel:010-4494-0312">
+                            <Link href="https://github.com/jisookoh" target={"_blank"}>
                                 <FontAwesomeIcon icon={faPhone} />
                             </Link>
                             <Link href="mailto:gosjioo0312@naver.com">
@@ -175,10 +175,27 @@ const MailBox = styled.div`
     & > a {
         display: block;
         width: 24px;
+        text-align: center;
 
         &:not(:last-child) {
             margin-right: 15px;
         }
+
+        >svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        ${({ theme }) => theme.media.mobileL`
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            >svg {
+                width: 20px;
+                height: 20px;
+            }
+        `}
     }
 `;
 
