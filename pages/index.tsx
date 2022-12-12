@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { newTopLists, newBottomLists, repairTopLists, repairBottomLists  } from "components/work/list";
 
@@ -29,6 +30,9 @@ export default function Home() {
                             </Link>
                             <Link href="tel:010-4494-0312">
                                 <FontAwesomeIcon icon={faPhone} />
+                            </Link>
+                            <Link href="mailto:gosjioo0312@naver.com">
+                                <FontAwesomeIcon icon={faGithub} />
                             </Link>
                         </MailBox>
                         <LeftTextBox>

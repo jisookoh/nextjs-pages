@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppProps) {
 					<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 					<title>Js Portpolio</title>
 					<meta name="description" content="지수의 포트폴리오 사이트" />
-					<link rel="icon" href="/favicon.ico" />
+					{/* <link rel="icon" href="/favicon.ico" /> */}
 				</Head>
 				<BasicLayout>
 					<Component {...pageProps} />
