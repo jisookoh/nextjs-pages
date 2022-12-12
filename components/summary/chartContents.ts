@@ -1,4 +1,26 @@
-export const ChartContent = {
+interface ITech {
+    techName: string,
+    icon: string
+}
+
+interface IData {
+    id: number,
+    project: string,
+    banner: string,
+    title: string,
+    desc: string,
+    contribute: number,
+    tech: ITech[],
+    during: string,
+    link: string,
+    image: string
+}
+
+interface IChartContent {
+    data : IData[]
+}
+
+export const ChartContent: IChartContent = {
     data : [
         {   
             id: 1,

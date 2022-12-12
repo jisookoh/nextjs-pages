@@ -15,3 +15,19 @@ export const seo: IPageSeo = {
     title: "Error",
   },
 };
+
+type cutZeroType = (removeDash: string) => string
+
+
+
+const cutZero: cutZeroType = (removeDash) => {
+  const sliceNumber = a.substr(0,2)
+  console.log(sliceNumber)
+  return '';
+}
+
+removeDash() {
+
+}
+
+cutZero('00325')

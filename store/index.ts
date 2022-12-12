@@ -17,7 +17,7 @@ function getServerState() {
   return JSON.parse((document.getElementById("__NEXT_DATA__") as HTMLElement).textContent as string).props.pageProps.initialState;
 }
 
-const store = () => {
+export const store = () => {
   const devMode = process.env.NODE_ENV === "development"; // NODE_ENV가 "development"일 경우에만 참
   const sagaMiddleware = createSagaMiddleware(); // Saga Middleware 생성
   const store = configureStore({
