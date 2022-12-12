@@ -9,11 +9,11 @@ export interface IScoreColorset {
 }
 
 export const scoreColorSet: IScoreColorset = {
-  safe: "#d74522",
-  low: "#ff8845",
-  moderate: "#ffbc1d",
-  dangerous: "#5cb85d",
-  critical: "#4085f1",
+  safe: "#bb91e3",
+  low: "#ba7fd4",
+  moderate: "#ab6fe3",
+  dangerous: "#9b4de3",
+  critical: "#8a2be2",
 };
 
 export const scoreBgColorSet: IScoreColorset = {
