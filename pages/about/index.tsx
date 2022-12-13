@@ -323,7 +323,7 @@ const ChracterisicList = styled.ol`
 
 const ChracterisicListItem = styled.li`
     flex: 1 0 0;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px 30px;
     background-color: #fff;
