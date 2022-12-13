@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from "styled-components";
 import { DefaultSeo } from "next-seo";
@@ -8,10 +8,27 @@ import wrapper from "store";
 import BasicLayout from '../components/common/BasicLayout';
 import globalTheme from '../components/style/global-theme';
 import SEO from "next-seo.config";
+import AOS from "aos";
 import { Provider } from 'react-redux';
+
+import "aos/dist/aos.css";
+import useBrowserSize from 'hooks/useBrowserSize';
+import { device } from "components/style/global-theme";
 
 function App({ Component, pageProps }: AppProps) {
 	const { store } = wrapper.useWrappedStore(pageProps);
+	const [windowWidth] = useBrowserSize();
+
+
+	useEffect(() => {
+		AOS.init({
+			disable: function() {
+				return windowWidth < device.tabletL;
+			},
+		});
+		AOS.refresh();
+	}, [windowWidth]);
+
 	return(
   	<React.Fragment>
 		<ThemeProvider theme={globalTheme}>
