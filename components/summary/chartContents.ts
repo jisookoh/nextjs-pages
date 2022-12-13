@@ -25,7 +25,7 @@ export const ChartContent: IChartContent = {
         {   
             id: 1,
             project: "hoban",
-            banner: "/images/hobanBanner.png",
+            banner: "/images/hobanBanner.jpg",
             title: "호반문화재단",
             desc: "호반문화재단은 복합문화예술의 플랫폼을 통하여 지속가능한 예술의 가치를 창출하는 재단입니다. \n 해당 작업은 php기반의 라이브러리인 Laravel로 퍼블리싱을 진행하였습니다. \n 풀 반응형이라 어떤 디바이스에서 접속하더라도 사용자가 동일한 정보를 얻도록 작업하였습니다.",
             contribute: 1,
@@ -103,7 +103,7 @@ export const ChartContent: IChartContent = {
         {
             id: 3,
             project: "foodbank",
-            banner: "/images/foodbankBanner.png",
+            banner: "/images/foodbankBanner.jpg",
             title: "푸드뱅크",
             desc: "푸드뱅크는 저소득층/생활이 어려운자에게 기부식품과 생활용품을 제공하는 기업입니다. \n 해당 작업은 php기반의 라이브러리인 Laravel로 퍼블리싱을 진행하였습니다. \n 메인페이지에 skrollr.js 라이브러리를 사용하여 parallax scrolling을 적용하여 생동감을 더하였으머, \n 후원 / 기부 / 교육에 관련한 컨텐츠가 많아 input form에 신경써서 작업하였습니다.",
             contribute: 1,
