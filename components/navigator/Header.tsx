@@ -20,6 +20,8 @@ const Header = () => {
     useEffect(() => {
         const headerSec = document.querySelectorAll<HTMLElement>(".headerBox")[0];
         let lastScrollY = 0;
+        let navbarHeight = headerSec.offsetHeight;
+        let delta = 5;
         let didScroll;
 
 
@@ -38,12 +40,24 @@ const Header = () => {
             }
         }, 250);
 
-
         function hasScrolled() {
-            const scrollY = window.scrollY;
+            let st = window.scrollY;
 
-            scrollY > lastScrollY ? headerSec.style.top = "-7rem" : headerSec.style.top = "0";
-            lastScrollY = scrollY;
+            if (Math.abs(lastScrollY - st) <= delta) return;
+            if (st > lastScrollY && st > navbarHeight) {
+                headerSec.style.top = "-7rem";
+            } else {
+                if (st + window.outerHeight < document.body.scrollHeight) {
+                    headerSec.style.top = "0";
+                }
+            }
+
+            lastScrollY = st;
+
+            // const scrollY = window.scrollY;
+
+            // scrollY > lastScrollY ? headerSec.style.top = "-7rem" : headerSec.style.top = "0";
+            // lastScrollY = scrollY;
         }
     })
 
