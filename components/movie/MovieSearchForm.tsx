@@ -106,6 +106,7 @@ const SearchInput = styled.input`
     border: 1px solid #ccc;
     font-size: 2rem;
     color: #777;
+    background-color: #fff;
 `;
 
 const SearchButton = styled.button`
