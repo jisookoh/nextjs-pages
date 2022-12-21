@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import menus from "./menus";
@@ -16,23 +16,31 @@ const Header = () => {
 
     const router = useRouter();
     const pathname = router.pathname;
-    // const [addHeader, setAddHeader] = useState<string | undefined>();
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', isSticky);
-    //     return () => {
-    //         window.removeEventListener('scroll', isSticky);
-    //     }
-    // }, [])
+    useEffect(() => {
+        let scrollableElement = document.body;
+        const headerSec = document.querySelectorAll<HTMLElement>(".headerBox")[0];
 
-    // const isSticky = (e) => {
-    //     const scrollTop = window.scrollY;
-    //     scrollTop >= 10 ? setAddHeader("is-sticky") : setAddHeader('');
-    // }
-
+        scrollableElement.addEventListener('wheel', checkScrollDirection);
+        
+        function checkScrollDirection(event) {
+          if (checkScrollDirectionIsUp(event)) {
+            headerSec.style.top = "0";
+          } else {
+            headerSec.style.top = "-7rem";
+          }
+        }
+        
+        function checkScrollDirectionIsUp(event) {
+          if (event.wheelDelta) {
+            return event.wheelDelta > 0;
+          }
+          return event.deltaY < 0;
+        }
+    })
 
     return (
-        <HeaderWrap className="header-section">
+        <HeaderWrap className="headerBox">
             <InnerCont>
                 <HeaderLogo />
                 <Nav>
@@ -53,12 +61,13 @@ const Header = () => {
 
 const HeaderWrap = styled.header`
     position: fixed;
-    top: 0;
+    top: -7rem;
     left: 0;
     width: 100%;
     z-index: 10;
     height: 7rem;
     display: flex;
+    transition: all 0.5s;
 `;
 
 const InnerCont = styled.div`
@@ -95,19 +104,34 @@ const Menus = styled.ul<{pathname:String}>`
   display: flex;
   list-style: none;
 
-  ${({ pathname }) => pathname !== "/about" ? `
-    > li:first-child {
-        h5 {
-            opacity: 1;
-        }
+  ${({ pathname }) => {
+    switch(pathname) {
+        case "/about":
+            return`
+                > li:nth-child(2) {
+                        h5 {
+                            opacity: 1;
+                        }
+                    }
+            `;
+        case "/movie":
+            return`
+                > li:last-child {
+                    h5 {
+                        opacity: 1;
+                    }
+                }
+            `;
+        default:
+            return`
+                > li:first-child {
+                    h5 {
+                        opacity: 1;
+                    }
+                }
+            `;
     }
-  ` : `
-    > li:last-child {
-        h5 {
-            opacity: 1;
-        }
-    }
-  `}
+  }}
 `;
 
 const MenuItem = styled.li`
