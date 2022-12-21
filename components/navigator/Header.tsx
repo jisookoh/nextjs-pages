@@ -18,29 +18,19 @@ const Header = () => {
     const pathname = router.pathname;
 
     useEffect(() => {
-        let scrollableElement = document.body;
         const headerSec = document.querySelectorAll<HTMLElement>(".headerBox")[0];
+        let lastScrollY = 0;
 
         if(window.scrollY  <= 0) {
             headerSec.style.top = "0";
         }
 
-        scrollableElement.addEventListener('wheel', checkScrollDirection);
-        
-        function checkScrollDirection(event) {
-          if (checkScrollDirectionIsUp(event)) {
-            headerSec.style.top = "0";
-          } else {
-            headerSec.style.top = "-7rem";
-          }
-        }
-        
-        function checkScrollDirectionIsUp(event) {
-          if (event.wheelDelta) {
-            return event.wheelDelta > 0;
-          }
-          return event.deltaY < 0;
-        }
+        addEventListener("scroll", e => {
+            const scrollY = window.scrollY;
+
+            scrollY > lastScrollY ? headerSec.style.top = "-7rem" : headerSec.style.top = "0";
+            lastScrollY = scrollY;
+        });
     })
 
     return (
