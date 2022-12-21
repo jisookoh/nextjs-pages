@@ -20,17 +20,31 @@ const Header = () => {
     useEffect(() => {
         const headerSec = document.querySelectorAll<HTMLElement>(".headerBox")[0];
         let lastScrollY = 0;
+        let didScroll;
+
 
         if(window.scrollY  <= 0) {
             headerSec.style.top = "0";
         }
-
+        
         addEventListener("scroll", e => {
+            didScroll= true;
+        });
+
+        setInterval(function () {
+            if(didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+
+        function hasScrolled() {
             const scrollY = window.scrollY;
 
             scrollY > lastScrollY ? headerSec.style.top = "-7rem" : headerSec.style.top = "0";
             lastScrollY = scrollY;
-        });
+        }
     })
 
     return (
