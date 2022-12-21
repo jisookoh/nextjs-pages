@@ -10,7 +10,6 @@ import globalTheme from '../components/style/global-theme';
 import SEO from "next-seo.config";
 import AOS from "aos";
 import { Provider } from 'react-redux';
-
 import "aos/dist/aos.css";
 import useBrowserSize from 'hooks/useBrowserSize';
 import { device } from "components/style/global-theme";

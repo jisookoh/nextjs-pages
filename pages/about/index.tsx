@@ -5,16 +5,8 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HobbyContainer from "components/about/HobbyContainer";
 import CharacterContainer from "components/about/CharacterContainer";
-// import { useDispatch, useSelector } from "react-redux";
-// import { loadTvShowRequestAction } from "store/modules/tvShow/reducer";
-// import { State } from "store/modules/rootReducer";
 
 export default function About() {
-    // const dispatch = useDispatch();
-    // const { tvShowTitle, tvShowContents } = useSelector((state:State) => state.tvShow);
-    // const onClickHero = useCallback((hero:string) => () => {
-    //     dispatch(loadTvShowRequestAction(hero));
-    // }, [dispatch]);
     return(
         <>
             <Section number={1}>
@@ -64,24 +56,6 @@ export default function About() {
                 </h2>
                 <CharacterContainer />
             </Section>
-            {/* <Section number={3}>
-                <button onClick={onClickHero('superman')}>슈퍼맨</button>
-                <button onClick={onClickHero('batman')}>배트맨맨</button>
-                { tvShowTitle && <div>{tvShowTitle}</div> }
-                <br />
-                {tvShowContents && (            
-                    <div>
-                        {tvShowContents.map((show) => {
-                            <div key={show.id}>
-                                <a href={show.url}>{show.name}</a>
-                                <div>점수 : {show.score}</div>
-                                <div>타입 : {show.type}</div>
-                                <div>언어 : {show.language}</div>
-                            </div>
-                        })}
-                    </div>
-                )}
-            </Section> */}
         </>
     )
 }

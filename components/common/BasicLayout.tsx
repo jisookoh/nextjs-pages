@@ -24,6 +24,7 @@ const BodyWrap = styled.div<{ route:String }>`
     font-family: "Noto Sans KR", "Open Sans", sans-serif;
     background-color:  ${({ route }) => route === "/" ? "#111" : "#f0f0f0"};
     overflow: hidden;
+    padding-top: 7rem;
 
     * {
       color : ${({ route }) => route === "/" ? "#fff" : "#111"};

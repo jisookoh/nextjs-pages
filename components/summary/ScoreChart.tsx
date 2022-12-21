@@ -98,7 +98,7 @@ export default function ScoreChart({ percent, color }: IRoundChartProps) {
     <svg width={chartSize} height={chartSize} viewBox={viewBox}>
       <g transform={rotateG}>
         <circle cx={circlePos} cy={circlePos} r={radius} stroke="#ACC0C7" strokeOpacity={0.3} fill="none" strokeWidth={strokeWidth} />
-        { percent < 0 && (
+        {percent < 0 && (
           <LoadingPath
             d={getArc(loadingData)}
             stroke={loadingColor}

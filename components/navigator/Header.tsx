@@ -52,9 +52,12 @@ const Header = () => {
 };
 
 const HeaderWrap = styled.header`
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
-    height: 70px;
+    height: 7rem;
     display: flex;
 `;
 
@@ -111,7 +114,7 @@ const MenuItem = styled.li`
     h5 {
         display: inline-block;
         margin: 0;
-        padding: 9px 15px;
+        padding: 9px 1.5rem;
         opacity: 0.6;
         font-family: Poppins, sans-serif;
         font-size: 1.5rem;

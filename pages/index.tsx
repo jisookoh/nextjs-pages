@@ -5,12 +5,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { newTopLists, newBottomLists, repairTopLists, repairBottomLists  } from "components/work/list";
 
+
 export default function Home() {
 
     const newTopListData = [...newTopLists];
     const newBottomListData = [...newBottomLists];
     const reapairTopListData = [...repairTopLists];
     const reapairBottomListData = [...repairBottomLists];
+
 
     return (
         <MainWrapper>
@@ -35,12 +37,6 @@ export default function Home() {
                                 <FontAwesomeIcon icon={faGithub} />
                             </Link>
                         </MailBox>
-                        <LeftTextBox>
-                                {/* <p>
-                                    The &quot;why&quot; and &quot;how&quot; of UX design is where I thrive.<br />
-                                    Let&apos;s make amazing products with flexibility, speed, and quality!
-                                </p> */}
-                            </LeftTextBox>
                     </SectionMain>
                 </WorkSecWrapper>
             </WorkSection>
@@ -199,15 +195,15 @@ const MailBox = styled.div`
     }
 `;
 
-const LeftTextBox = styled.div`
-    text-align:right;
+// const LeftTextBox = styled.div`
+//     text-align:right;
 
-    & > p {
-        font-size: 1.6rem;
-        line-height:1.4;
-        margin: 0;
-    }
-`;
+//     & > p {
+//         font-size: 1.6rem;
+//         line-height:1.4;
+//         margin: 0;
+//     }
+// `;
 
 const WorkListWrapper = styled.ul<{moreWidth:String}>`
     list-style: none;

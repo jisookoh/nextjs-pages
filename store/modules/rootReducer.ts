@@ -1,10 +1,11 @@
 import { HYDRATE } from "next-redux-wrapper";
 import { combineReducers, AnyAction } from "@reduxjs/toolkit";
-import tvShow from './tvShow/reducer';
-import ITvShowState from "./tvShow/interface";
+import { MovieState } from "./movie/interface";
+import movies from "./movie/reducer";
+
 
 export type State = {
-	tvShow: ITvShowState
+	movies: MovieState
 };
 
 const rootReducer = (state: State | undefined, action: AnyAction): State => {
@@ -16,7 +17,7 @@ const rootReducer = (state: State | undefined, action: AnyAction): State => {
 		};
 		default: {
 		const combinedReducer = combineReducers({
-			tvShow,
+			movies,
 		});
 		return combinedReducer(state, action);
 		}

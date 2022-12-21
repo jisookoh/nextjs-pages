@@ -24,6 +24,9 @@ const Footer = () => {
                 <FooterNavigationItem>
                     <Link href="/about">About</Link>
                 </FooterNavigationItem>
+                <FooterNavigationItem>
+                    <Link href="/movie">Movie</Link>
+                </FooterNavigationItem>
             </FooterNavigation>
             <FooterCopyright>
                 © 2022 JISOO KOH
@@ -32,10 +35,12 @@ const Footer = () => {
     );
 };
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
     max-width: 500px;
     margin: 0 auto;
     padding 50px 0;
+    position: relative;
+    z-index: 2;
 
     ${({ theme }) => theme.media.tabletL`
         padding: 5rem 20px;

@@ -12,6 +12,10 @@ const menus: IMenu[] = [
   {
     title: "About",
     link: "/about"
+  },
+  {
+    title: "Movie",
+    link: "/movie"
   }
 ];
 
