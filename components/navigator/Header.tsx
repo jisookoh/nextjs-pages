@@ -21,6 +21,10 @@ const Header = () => {
         let scrollableElement = document.body;
         const headerSec = document.querySelectorAll<HTMLElement>(".headerBox")[0];
 
+        if(window.scrollY  <= 0) {
+            headerSec.style.top = "0";
+        }
+
         scrollableElement.addEventListener('wheel', checkScrollDirection);
         
         function checkScrollDirection(event) {
