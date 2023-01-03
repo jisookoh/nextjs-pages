@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { asyncMoviesActions } from "store/modules/movie/reducer";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "store/modules/rootReducer";
@@ -18,9 +18,11 @@ const SearchInputForm = () => {
     const month = today.getMonth()+1;
     const day = today.getDate()-1;
     const todayDate = year + (("00"+month.toString()).slice(-2)) + (("00"+day.toString()).slice(-2));
-
     const [searchVal, setSearchVal] = useState<string>(todayDate);
 
+    useEffect(() => {
+        dispatch(asyncMoviesActions.request(todayDate));
+    },[dispatch, todayDate])
 
     const sendQuery = () => {
 		dispatch(asyncMoviesActions.request(searchVal));

@@ -44,7 +44,7 @@ export default function Home() {
             <WorkSection number={2}>
                 <WorkSecWrapper>
                     <TitleBox>
-                        <WorkListTitle>New Project</WorkListTitle>
+                        <WorkListTitle>Projects</WorkListTitle>
                         <Link href={"/works/new"}>More +</Link>
                     </TitleBox>
                     <WorkListWrapper moreWidth="left">
