@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 import styled from "styled-components";
 import Image from "next/legacy/image";
 import ScoreChart from "components/summary/ScoreChart";
@@ -32,7 +32,23 @@ export default function ContentsDescription({qProject}) {
           }
         });
       }, [roundBoxRef]);
-    
+
+    const hasChangedDesign = useMemo(() => {
+        if (data?.link === '' || !data?.link) {
+            return <button disabled>링크 비활성화</button>
+        }
+
+        return (
+            <a href={data?.link} target="_blank" rel="noreferrer noopener">
+                <span>홈페이지 이동</span>
+                <span className="Icon">
+                    <FontAwesomeIcon icon={faChevronRight}  />
+                </span>
+            </a>
+        )
+    }, [data]);
+
+
     return (
         <ContributeWrapper>
             {data?.project !== queryProject 
@@ -85,12 +101,7 @@ export default function ContentsDescription({qProject}) {
                         }
                     </ImageWrapper>
                     <HomePageLink>
-                        <a href={data?.link} target="_blank" rel="noreferrer noopener">
-                            <span>홈페이지 이동</span>
-                            <span className="Icon">
-                            <FontAwesomeIcon icon={faChevronRight}  />
-                            </span>
-                        </a>
+                        { hasChangedDesign }
                     </HomePageLink>
                 </DescriptionBox>
             </React.Fragment>
@@ -241,7 +252,8 @@ const TechListItem =styled.li`
 const HomePageLink = styled.div`
     text-align:center;
 
-    & > a {
+    & > a,
+    & > button{
         display: inline-block;
         max-width: 200px;
         width: 100%;
@@ -291,6 +303,16 @@ const HomePageLink = styled.div`
         :hover::after {
             opacity: 1;
             width: 120%;
+        }
+        
+        :disabled {
+            border-color: #e0e0e0;
+            cursor: not-allowed;
+            color: #e0e0e0;
+            
+            &:hover::after {
+                opacity: 0;
+            }
         }
 
         > span {

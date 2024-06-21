@@ -60,7 +60,7 @@ export const ChartContent: IChartContent = {
                 },
             ],
             during: "2주",
-            link: "http://www.hobancf.or.kr/",
+            link: "",
             image: "/images/mokup/hobanMokup.png"
         },
         {
