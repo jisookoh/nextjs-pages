@@ -41,6 +41,24 @@ export default function CharacterContainer() {
                         <p>&nbsp;개인사유</p>
                     </div>
                 </ChracterisicListItem>
+                <ChracterisicListItem>
+                    <div>
+                        <h5>기간 : </h5>
+                        <p>&nbsp;2023.01.16 ~ 2024.02.29</p>
+                    </div>
+                    <div>
+                        <h5>직무 : </h5>
+                        <p>&nbsp;프론트엔드</p>
+                    </div>
+                    <div>
+                        <h5>회사명 : </h5>
+                        <p>&nbsp;Promenade AI<strong>(역량 평가 솔루션)</strong></p>
+                    </div>
+                    <div>
+                        <h5>퇴사사유 : </h5>
+                        <p>&nbsp;개인사유</p>
+                    </div>
+                </ChracterisicListItem>
             </ChracterisicList>
         </>
     )
@@ -49,19 +67,17 @@ export default function CharacterContainer() {
 const ChracterisicList = styled.ol`
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
 `;
 
 const ChracterisicListItem = styled.li`
-    flex: 1 0 0;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px 30px;
     background-color: #fff;
+    width: calc(50% - 8px);
     // box-shadow: 0 20px 30px 0 rgba(0,0,0,0.1);
 
-    :not(:last-child) {
-        margin-right: 3%;
-    }
 
     > div {
         display : flex;
