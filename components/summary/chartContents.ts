@@ -316,7 +316,7 @@ export const ChartContent: IChartContent = {
                 },
             ],
             during: "2주",
-            link: "http://kwebtoon.net/",
+            link: "",
             image: "/images/mokup/kwebMokup.png"
         },
         {
@@ -386,7 +386,7 @@ export const ChartContent: IChartContent = {
                 },
             ],
             during: "2주",
-            link: "http://hoan20.co.kr/",
+            link: "http://taewondnc.com/",
             image: "/images/mokup/hoanMokup.png"
         },
         {
@@ -448,7 +448,7 @@ export const ChartContent: IChartContent = {
                 }
             ],
             during: "유지보수",
-            link: "https://ip-detector.com/",
+            link: "",
             image: "/images/mokup/ipMokup.png"
         },
         {
@@ -469,7 +469,7 @@ export const ChartContent: IChartContent = {
                 }
             ],
             during: "유지보수",
-            link: "https://noscam.co.kr/",
+            link: "",
             image: "/images/mokup/noscamMokup.png"
         },
     ]
