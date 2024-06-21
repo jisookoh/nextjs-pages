@@ -33,7 +33,7 @@ const BodyWrap = styled.div<{ route:String }>`
    
 `;
 
-const Main = styled.div`
+const Main = styled.main`
     width: 100%;
 `;
 
