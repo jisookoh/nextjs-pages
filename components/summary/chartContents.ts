@@ -466,12 +466,37 @@ export const ChartContent: IChartContent = {
                 {
                     techName: "Flask",
                     icon: "/images/flaskIcon.png"
+                },
+                {
+                    techName: "JQuery",
+                    icon: "/images/jqueryIcon.png"
                 }
             ],
             during: "유지보수",
             link: "",
             image: "/images/mokup/noscamMokup.png"
         },
+        // {
+        //     id: 15,
+        //     project: "munch-skill",
+        //     banner: "",
+        //     title: "MUNCH-SKILL",
+        //     desc: "",
+        //     contribute: 0.8,
+        //     tech: [
+        //         {
+        //             techName: "React",
+        //             icon: "/images/reactIcon.png"
+        //         },
+        //         {
+        //             techName: "Javascript",
+        //             icon: "/images/flaskIcon.png"
+        //         }
+        //     ],
+        //     during: "유지보수",
+        //     link: "",
+        //     image: "/images/mokup/noscamMokup.png"
+        // },
     ]
 }
 
