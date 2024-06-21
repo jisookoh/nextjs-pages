@@ -171,7 +171,7 @@ export const ChartContent: IChartContent = {
                 },
             ],
             during: "3주",
-            link: "http://truewomen.gabia.io/",
+            link: "http://www.wfwp.or.kr/",
             image: "/images/mokup/wfwpMokup.png"
         },
         {
