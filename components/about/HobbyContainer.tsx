@@ -33,12 +33,12 @@ export default function HobbyContainer() {
                 <HobbyListItem data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
                     <HobbyImageWrapper>
                         <Image 
-                            src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/hobby3.jpg`} 
+                            src={`/${process.env.NEXT_PUBLIC_IMAGES}/images/hobby_read_a_book.jpg`}
                             width={"350"}
-                            height={"500"}
+                            height={"350"}
                             layout={"fixed"}
-                            blurDataURL={`/${process.env.NEXT_PUBLIC_IMAGES}/images/hobby2.jpg`} 
-                            alt={'박람회 이미지1'}
+                            blurDataURL={`/${process.env.NEXT_PUBLIC_IMAGES}/images/hobby_read_a_book.jpg`}
+                            alt={'책 이미지'}
                             priority
                         />
                     </HobbyImageWrapper>
@@ -57,7 +57,7 @@ export default function HobbyContainer() {
                             height={"600"}
                             layout={"fixed"}
                             blurDataURL={`/${process.env.NEXT_PUBLIC_IMAGES}/images/hobby2.jpg`} 
-                            alt={'박람회 이미지1'}
+                            alt={'산책로 이미지'}
                             priority
                         />
                     </HobbyImageWrapper>
