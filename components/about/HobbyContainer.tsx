@@ -43,9 +43,9 @@ export default function HobbyContainer() {
                         />
                     </HobbyImageWrapper>
                     <HobbyDescWrapper>
-                        <HobbyDescTitle>문화체험</HobbyDescTitle>
+                        <HobbyDescTitle>책 읽기</HobbyDescTitle>
                         <HobbyDesc>
-                            평소 집에 있는것을 좋아하나, 외출했을 때 전통적인 문화체험과 다른 동네의 분위기를 느끼는 것을 좋아합니다.
+                            기술서적, 에세이, 문학 등 다양한 서적을 읽는 것에 흥미가 있으며, 경험해보지 못하거나 알지 못한 지식을 간접적으로 체험하는 것을 좋아합니다.
                         </HobbyDesc>
                     </HobbyDescWrapper>
                 </HobbyListItem>
@@ -62,9 +62,9 @@ export default function HobbyContainer() {
                         />
                     </HobbyImageWrapper>
                     <HobbyDescWrapper>
-                        <HobbyDescTitle>산책</HobbyDescTitle>
+                        <HobbyDescTitle>달리기</HobbyDescTitle>
                         <HobbyDesc>
-                            생각이 많을때나 복잡할 때 산책하는 것을 좋아하고, 앉아있는 시간이 많음으로 인해 걷거나 뛰는 것을 좋아합니다.
+                            생각이 많을때나 복잡할 때 달리면서 생각에 휴식을 취하고 스트레스를 해소하는 것을 선호합니다.
                         </HobbyDesc>
                     </HobbyDescWrapper>
                 </HobbyListItem>
