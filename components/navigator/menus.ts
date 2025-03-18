@@ -3,21 +3,19 @@ export interface IMenu {
   link: string;
 }
 
-
 const menus: IMenu[] = [
   {
     title: "Works",
-    link: "/"
+    link: "/",
   },
   {
     title: "About",
-    link: "/about"
+    link: "/about",
   },
-  {
-    title: "Movie",
-    link: "/movie"
-  }
+  // {
+  //   title: "Movie",
+  //   link: "/movie"
+  // }
 ];
-
 
 export default menus;
